@@ -10,6 +10,7 @@ public class SantaClausMoving : MonoBehaviour
     public GroundDetector detector;
     public int jumpCounter;
     public Equipment equipment;
+    public Animator playerAnimator;
     private void Update()
     {
         float move = Input.GetAxis("Horizontal");
@@ -19,10 +20,26 @@ public class SantaClausMoving : MonoBehaviour
             if (jumpCounter > 0 && detector.isGround)
                 playerRB.AddForce(Vector2.up * jumpSpeed * 10);
         }
+        if (Input.GetKeyUp(KeyCode.A))
+        {
+            playerAnimator.Play("IdleLeft");
+        }
+        if (Input.GetKeyUp(KeyCode.D))
+        {
+            playerAnimator.Play("IdleRight");
+        }
+        if (Input.GetKey(KeyCode.A))
+        {
+            playerAnimator.Play("WalkLeft");
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            playerAnimator.Play("WalkRight");
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Window")
+        if (collision.tag == "Window")
         {
             equipment.isOn = true;
         }

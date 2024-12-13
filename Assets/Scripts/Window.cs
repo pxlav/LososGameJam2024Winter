@@ -40,10 +40,11 @@ public class Window : MonoBehaviour
                     }
                     if (apartment.windowTwoID == 1)
                     {
+                        isWindowClicked = true;
+                        floorsBlocking.windowChecked++;
                         Debug.Log("DOBRZE");
                     }
                     if (apartment.windowTwoID == 2)
-                        isWindowClicked = true;
                     {
                         Debug.Log("ZLE");
                     }
@@ -62,6 +63,7 @@ public class Window : MonoBehaviour
                     {
                         Debug.Log("DOBRZE");
                         isWindowClicked = true;
+                        floorsBlocking.windowChecked++;
                     }
                 }
             }
@@ -75,6 +77,7 @@ public class Window : MonoBehaviour
                         {
                             Debug.Log("DOBRZE");
                             isWindowClicked = true;
+                            floorsBlocking.windowChecked++;
                         }
                         if (apartment.windowOneID == 1)
                         {
@@ -94,9 +97,10 @@ public class Window : MonoBehaviour
                         if (apartment.windowOneID == 1)
                         {
                             Debug.Log("DOBRZE");
+                            floorsBlocking.windowChecked++;
+                            isWindowClicked = true;
                         }
                         if (apartment.windowOneID == 2)
-                            isWindowClicked = true;
                         {
                             Debug.Log("ZLE");
                         }
@@ -115,6 +119,7 @@ public class Window : MonoBehaviour
                         {
                             Debug.Log("DOBRZE"); 
                             isWindowClicked = true;
+                            floorsBlocking.windowChecked++;
                         }
                     }
                 }
