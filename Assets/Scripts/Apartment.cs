@@ -6,8 +6,11 @@ public class Apartment : MonoBehaviour
 {
     public int windowOneID;
     public int windowTwoID;
+    public int optionWindowOne;
+    public int optionWindowTwo;
     public Sprite[] spriteDataBase;
     public Sprite[] windowSpritesDataBase;
+    public Sprite[] giftsDataBase;
     public SpriteRenderer apartmentSprite;
     public SpriteRenderer[] windowsSprites;
     private void Update()

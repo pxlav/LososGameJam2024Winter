@@ -18,6 +18,7 @@ public class SantaClausMoving : MonoBehaviour
     public float deadTimer;
     public GameObject playerLoseCanvas;
     public bool isLadder;
+    public MainMenu menu;
     private void Start()
     {
         playerAnimated.SetActive(true);
@@ -28,31 +29,34 @@ public class SantaClausMoving : MonoBehaviour
     {
         if (isFailed == false)
         {
-            float move = Input.GetAxis("Horizontal");
-            playerRB.velocity = new Vector2(move * moveSpeed, playerRB.velocity.y);
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (menu.isOn == false && menu.cinematicScene.canOnScene == false)
             {
-                if (jumpCounter > 0 && detector.isGround)
-                    playerRB.AddForce(Vector2.up * jumpSpeed * 10);
-            }
-            if (isLadder == false && !Input.GetKey(KeyCode.W))
-            {
+                float move = Input.GetAxis("Horizontal");
+                playerRB.velocity = new Vector2(move * moveSpeed, playerRB.velocity.y);
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    if (jumpCounter > 0 && detector.isGround)
+                        playerRB.AddForce(Vector2.up * jumpSpeed * 10);
+                }
+                if (isLadder == false && !Input.GetKey(KeyCode.W))
+                {
 
-                if (Input.GetKeyUp(KeyCode.A))
-                {
-                    playerAnimator.Play("IdleLeft");
-                }
-                if (Input.GetKeyUp(KeyCode.D))
-                {
-                    playerAnimator.Play("IdleRight");
-                }
-                if (Input.GetKey(KeyCode.A))
-                {
-                    playerAnimator.Play("WalkLeft");
-                }
-                if (Input.GetKey(KeyCode.D))
-                {
-                    playerAnimator.Play("WalkRight");
+                    if (Input.GetKeyUp(KeyCode.A))
+                    {
+                        playerAnimator.Play("IdleLeft");
+                    }
+                    if (Input.GetKeyUp(KeyCode.D))
+                    {
+                        playerAnimator.Play("IdleRight");
+                    }
+                    if (Input.GetKey(KeyCode.A))
+                    {
+                        playerAnimator.Play("WalkLeft");
+                    }
+                    if (Input.GetKey(KeyCode.D))
+                    {
+                        playerAnimator.Play("WalkRight");
+                    }
                 }
             }
         }

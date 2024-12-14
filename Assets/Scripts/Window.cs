@@ -12,90 +12,179 @@ public class Window : MonoBehaviour
     public SantaClausMoving playerController;
     private void Update()
     {
-        if(isPlayer == true && isWindowClicked == false)
+        if (isPlayer == true && isWindowClicked == false)
         {
-            if(isSecond == true)
+            if (isSecond == true)
             {
-                if(Input.GetKeyDown(KeyCode.T))
+                if (Input.GetKeyDown(KeyCode.T))
                 {
-                    if(apartment.windowTwoID == 0)
+                    if (apartment.optionWindowTwo == 0)
                     {
-                        Debug.Log("DOBRZE");
-                        floorsBlocking.windowChecked++;
-                        isWindowClicked = true;
+                        if (apartment.windowTwoID == 0)
+                        {
+                            Debug.Log("DOBRZE");
+                            floorsBlocking.windowChecked++;
+                            isWindowClicked = true;
+                        }
+                        if (apartment.windowTwoID == 1)
+                        {
+                            Debug.Log("ZLE");
+                            playerController.isFailed = true;
+                        }
+                        if (apartment.windowTwoID == 2)
+                        {
+                            Debug.Log("ZLE");
+                            playerController.isFailed = true;
+                        }
                     }
-                    if (apartment.windowTwoID == 1)
+                    else
                     {
-                        Debug.Log("ZLE");
-                        playerController.isFailed = true;
-                    }
-                    if (apartment.windowTwoID == 2)
-                    {
-                        Debug.Log("ZLE");
-                        playerController.isFailed = true;
-                    }
-                    if (apartment.windowTwoID == 2)
-                    {
-                        Debug.Log("ZLE");
-                        playerController.isFailed = true;
-                    }
-                    if (apartment.windowTwoID == 2)
-                    {
-                        Debug.Log("ZLE");
                         playerController.isFailed = true;
                     }
 
                 }
                 if (Input.GetKeyDown(KeyCode.Y))
                 {
-                    if (apartment.windowTwoID == 0)
+                    if (apartment.optionWindowTwo == 1)
                     {
-                        Debug.Log("ZLE");
-                        playerController.isFailed = true;
+                        if (apartment.windowTwoID == 0)
+                        {
+                            Debug.Log("DOBRZE");
+                            floorsBlocking.windowChecked++;
+                            isWindowClicked = true;
+                        }
+                        if (apartment.windowTwoID == 1)
+                        {
+                            Debug.Log("ZLE");
+                            playerController.isFailed = true;
+                        }
+                        if (apartment.windowTwoID == 2)
+                        {
+                            Debug.Log("ZLE");
+                            playerController.isFailed = true;
+                        }
                     }
-                    if (apartment.windowTwoID == 1)
+                    else
                     {
-                        isWindowClicked = true;
-                        floorsBlocking.windowChecked++;
-                        Debug.Log("DOBRZE");
-                    }
-                    if (apartment.windowTwoID == 2)
-                    {
-                        Debug.Log("ZLE");
                         playerController.isFailed = true;
                     }
                 }
                 if (Input.GetKeyDown(KeyCode.U))
                 {
-                    if (apartment.windowTwoID == 0)
+                    if (apartment.optionWindowTwo == 0)
                     {
-                        Debug.Log("ZLE");
-                        playerController.isFailed = true;
+                        if (apartment.windowTwoID == 0)
+                        {
+                            Debug.Log("ZLE");
+                            playerController.isFailed = true;
+                        }
+                        if (apartment.windowTwoID == 1)
+                        {
+                            Debug.Log("DOBRZE");
+                            floorsBlocking.windowChecked++;
+                            isWindowClicked = true;
+                        }
+                        if (apartment.windowTwoID == 2)
+                        {
+                            Debug.Log("ZLE");
+                            playerController.isFailed = true;
+                        }
                     }
-                    if (apartment.windowTwoID == 1)
+                    else
                     {
-                        Debug.Log("ZLE");
                         playerController.isFailed = true;
-                    }
-                    if (apartment.windowTwoID == 2)
-                    {
-                        Debug.Log("DOBRZE");
-                        isWindowClicked = true;
-                        floorsBlocking.windowChecked++;
                     }
                 }
-            }
-            else
-            {
-                if(isWindowClicked == false)
+                if (Input.GetKeyDown(KeyCode.I))
                 {
-                    if (Input.GetKeyDown(KeyCode.T))
+                    if (apartment.optionWindowTwo == 1)
+                    {
+                        if (apartment.windowTwoID == 0)
+                        {
+                            Debug.Log("ZLE");
+                            playerController.isFailed = true;
+                        }
+                        if (apartment.windowTwoID == 1)
+                        {
+                            Debug.Log("DOBRZE");
+                            floorsBlocking.windowChecked++;
+                            isWindowClicked = true;
+                        }
+                        if (apartment.windowTwoID == 2)
+                        {
+                            Debug.Log("ZLE");
+                            playerController.isFailed = true;
+                        }
+                    }
+                    else
+                    {
+                        playerController.isFailed = true;
+                    }
+                    if (Input.GetKeyDown(KeyCode.O))
+                    {
+                        if (apartment.optionWindowTwo == 0)
+                        {
+                            if (apartment.windowTwoID == 0)
+                            {
+                                Debug.Log("ZLE");
+                                playerController.isFailed = true;
+                            }
+                            if (apartment.windowTwoID == 1)
+                            {
+                                Debug.Log("ZLE");
+                                playerController.isFailed = true;
+                            }
+                            if (apartment.windowTwoID == 2)
+                            {
+                                Debug.Log("DOBRZE");
+                                floorsBlocking.windowChecked++;
+                                isWindowClicked = true;
+                            }
+                        }
+                        else
+                        {
+                            playerController.isFailed = true;
+                        }
+
+                    }
+                    if (Input.GetKeyDown(KeyCode.P))
+                    {
+                        if (apartment.optionWindowTwo == 1)
+                        {
+                            if (apartment.windowTwoID == 0)
+                            {
+                                Debug.Log("ZLE");
+                                playerController.isFailed = true;
+                            }
+                            if (apartment.windowTwoID == 1)
+                            {
+                                Debug.Log("ZLE");
+                                playerController.isFailed = true;
+                            }
+                            if (apartment.windowTwoID == 2)
+                            {
+                                Debug.Log("DOBRZE");
+                                floorsBlocking.windowChecked++;
+                                isWindowClicked = true;
+                            }
+                        }
+                        else
+                        {
+                            playerController.isFailed = true;
+                        }
+                    }
+                }
+            }else
+            {
+                if (Input.GetKeyDown(KeyCode.T))
+                {
+                    if (apartment.optionWindowOne == 0)
                     {
                         if (apartment.windowOneID == 0)
                         {
                             Debug.Log("DOBRZE");
-                            isWindowClicked = true;
                             floorsBlocking.windowChecked++;
+                            isWindowClicked = true;
                         }
                         if (apartment.windowOneID == 1)
                         {
@@ -108,7 +197,41 @@ public class Window : MonoBehaviour
                             playerController.isFailed = true;
                         }
                     }
-                    if (Input.GetKeyDown(KeyCode.Y))
+                    else
+                    {
+                        playerController.isFailed = true;
+                    }
+
+                }
+                if (Input.GetKeyDown(KeyCode.Y))
+                {
+                    if (apartment.optionWindowOne == 1)
+                    {
+                        if (apartment.windowOneID == 0)
+                        {
+                            Debug.Log("DOBRZE");
+                            floorsBlocking.windowChecked++;
+                            isWindowClicked = true;
+                        }
+                        if (apartment.windowOneID == 1)
+                        {
+                            Debug.Log("ZLE");
+                            playerController.isFailed = true;
+                        }
+                        if (apartment.windowOneID == 2)
+                        {
+                            Debug.Log("ZLE");
+                            playerController.isFailed = true;
+                        }
+                    }
+                    else
+                    {
+                        playerController.isFailed = true;
+                    }
+                }
+                if (Input.GetKeyDown(KeyCode.U))
+                {
+                    if (apartment.optionWindowOne == 0)
                     {
                         if (apartment.windowOneID == 0)
                         {
@@ -127,7 +250,14 @@ public class Window : MonoBehaviour
                             playerController.isFailed = true;
                         }
                     }
-                    if (Input.GetKeyDown(KeyCode.U))
+                    else
+                    {
+                        playerController.isFailed = true;
+                    }
+                }
+                if (Input.GetKeyDown(KeyCode.I))
+                {
+                    if (apartment.optionWindowOne == 1)
                     {
                         if (apartment.windowOneID == 0)
                         {
@@ -136,20 +266,79 @@ public class Window : MonoBehaviour
                         }
                         if (apartment.windowOneID == 1)
                         {
-                            Debug.Log("ZLE");
-                            playerController.isFailed = true;
+                            Debug.Log("DOBRZE");
+                            floorsBlocking.windowChecked++;
+                            isWindowClicked = true;
                         }
                         if (apartment.windowOneID == 2)
                         {
-                            Debug.Log("DOBRZE"); 
-                            isWindowClicked = true;
-                            floorsBlocking.windowChecked++;
+                            Debug.Log("ZLE");
+                            playerController.isFailed = true;
+                        }
+                    }
+                    else
+                    {
+                        playerController.isFailed = true;
+                    }
+                    if (Input.GetKeyDown(KeyCode.O))
+                    {
+                        if (apartment.optionWindowOne == 0)
+                        {
+                            if (apartment.windowOneID == 0)
+                            {
+                                Debug.Log("ZLE");
+                                playerController.isFailed = true;
+                            }
+                            if (apartment.windowOneID == 1)
+                            {
+                                Debug.Log("ZLE");
+                                playerController.isFailed = true;
+                            }
+                            if (apartment.windowOneID == 2)
+                            {
+                                Debug.Log("DOBRZE");
+                                floorsBlocking.windowChecked++;
+                                isWindowClicked = true;
+                            }
+                        }
+                        else
+                        {
+                            playerController.isFailed = true;
+                        }
+
+                    }
+                    if (Input.GetKeyDown(KeyCode.P))
+                    {
+                        if (apartment.optionWindowOne == 1)
+                        {
+                            if (apartment.windowOneID == 0)
+                            {
+                                Debug.Log("ZLE");
+                                playerController.isFailed = true;
+                            }
+                            if (apartment.windowOneID == 1)
+                            {
+                                Debug.Log("ZLE");
+                                playerController.isFailed = true;
+                            }
+                            if (apartment.windowOneID == 2)
+                            {
+                                Debug.Log("DOBRZE");
+                                floorsBlocking.windowChecked++;
+                                isWindowClicked = true;
+                            }
+                        }
+                        else
+                        {
+                            playerController.isFailed = true;
                         }
                     }
                 }
             }
+
         }
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")

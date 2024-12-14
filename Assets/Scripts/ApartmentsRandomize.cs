@@ -23,6 +23,8 @@ public class ApartmentsRandomize : MonoBehaviour
             {
                 apartments[i].windowOneID = Random.Range(0, 3);
                 apartments[i].windowTwoID = Random.Range(0, 3);
+                apartments[i].optionWindowOne = Random.Range(0, 2);
+                apartments[i].optionWindowTwo = Random.Range(0, 2);
                 apartments[i].apartmentSprite.sprite = apartments[i].spriteDataBase[Random.Range(0, 4)];
                 if (i < apartments.Length)
                 {

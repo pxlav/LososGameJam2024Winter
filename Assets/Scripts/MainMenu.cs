@@ -10,6 +10,11 @@ public class MainMenu : MonoBehaviour
     public GameObject menuObj;
     public CameraMovementFollow cameraFollow;
     public Transform[] cameraTargets;
+    public CinematicCutScene cinematicScene;
+    private void Start()
+    {
+        isOn = true;
+    }
 
     private void Update()
     {
@@ -31,6 +36,10 @@ public class MainMenu : MonoBehaviour
     public void Play()
     {
         isOn = false;
+    }
+    public void NewGame()
+    {
+        cinematicScene.canOnScene = true;
     }
     public void Exit()
     {
