@@ -9,6 +9,7 @@ public class Window : MonoBehaviour
     public Apartment apartment;
     public FloorsBlocking floorsBlocking;
     public bool isWindowClicked;
+    public SantaClausMoving playerController;
     private void Update()
     {
         if(isPlayer == true && isWindowClicked == false)
@@ -26,17 +27,31 @@ public class Window : MonoBehaviour
                     if (apartment.windowTwoID == 1)
                     {
                         Debug.Log("ZLE");
+                        playerController.isFailed = true;
                     }
                     if (apartment.windowTwoID == 2)
                     {
                         Debug.Log("ZLE");
+                        playerController.isFailed = true;
                     }
+                    if (apartment.windowTwoID == 2)
+                    {
+                        Debug.Log("ZLE");
+                        playerController.isFailed = true;
+                    }
+                    if (apartment.windowTwoID == 2)
+                    {
+                        Debug.Log("ZLE");
+                        playerController.isFailed = true;
+                    }
+
                 }
                 if (Input.GetKeyDown(KeyCode.Y))
                 {
                     if (apartment.windowTwoID == 0)
                     {
                         Debug.Log("ZLE");
+                        playerController.isFailed = true;
                     }
                     if (apartment.windowTwoID == 1)
                     {
@@ -47,6 +62,7 @@ public class Window : MonoBehaviour
                     if (apartment.windowTwoID == 2)
                     {
                         Debug.Log("ZLE");
+                        playerController.isFailed = true;
                     }
                 }
                 if (Input.GetKeyDown(KeyCode.U))
@@ -54,10 +70,12 @@ public class Window : MonoBehaviour
                     if (apartment.windowTwoID == 0)
                     {
                         Debug.Log("ZLE");
+                        playerController.isFailed = true;
                     }
                     if (apartment.windowTwoID == 1)
                     {
                         Debug.Log("ZLE");
+                        playerController.isFailed = true;
                     }
                     if (apartment.windowTwoID == 2)
                     {
@@ -82,10 +100,12 @@ public class Window : MonoBehaviour
                         if (apartment.windowOneID == 1)
                         {
                             Debug.Log("ZLE");
+                            playerController.isFailed = true;
                         }
                         if (apartment.windowOneID == 2)
                         {
                             Debug.Log("ZLE");
+                            playerController.isFailed = true;
                         }
                     }
                     if (Input.GetKeyDown(KeyCode.Y))
@@ -93,6 +113,7 @@ public class Window : MonoBehaviour
                         if (apartment.windowOneID == 0)
                         {
                             Debug.Log("ZLE");
+                            playerController.isFailed = true;
                         }
                         if (apartment.windowOneID == 1)
                         {
@@ -103,6 +124,7 @@ public class Window : MonoBehaviour
                         if (apartment.windowOneID == 2)
                         {
                             Debug.Log("ZLE");
+                            playerController.isFailed = true;
                         }
                     }
                     if (Input.GetKeyDown(KeyCode.U))
@@ -110,10 +132,12 @@ public class Window : MonoBehaviour
                         if (apartment.windowOneID == 0)
                         {
                             Debug.Log("ZLE");
+                            playerController.isFailed = true;
                         }
                         if (apartment.windowOneID == 1)
                         {
                             Debug.Log("ZLE");
+                            playerController.isFailed = true;
                         }
                         if (apartment.windowOneID == 2)
                         {
