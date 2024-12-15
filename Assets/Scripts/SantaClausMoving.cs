@@ -19,6 +19,7 @@ public class SantaClausMoving : MonoBehaviour
     public GameObject playerLoseCanvas;
     public bool isLadder;
     public MainMenu menu;
+    public bool isRight;
     private void Start()
     {
         playerAnimated.SetActive(true);
@@ -27,6 +28,14 @@ public class SantaClausMoving : MonoBehaviour
     }
     private void Update()
     {
+        if (Input.GetKey(KeyCode.D))
+        {
+            isRight = true;
+        }
+        if (Input.GetKey(KeyCode.A))
+        {
+            isRight = false;
+        }
         if (isFailed == false)
         {
             if (menu.isOn == false && menu.cinematicScene.canOnScene == false)
@@ -39,6 +48,32 @@ public class SantaClausMoving : MonoBehaviour
                         playerRB.AddForce(Vector2.up * jumpSpeed * 10);
                 }
                 if (isLadder == false && !Input.GetKey(KeyCode.W))
+                {
+
+                    if (detector.isGround == false)
+                    {
+                        if (isRight == true)
+                        {
+                            playerAnimator.Play("JumpRight");
+                        }
+                        else
+                        {
+                            playerAnimator.Play("JumpLeft");
+                        }
+                    }
+                    else
+                    {
+                        if (playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("JumpRight"))
+                        {
+                            playerAnimator.Play("IdleRight");
+                        }
+                        if (playerAnimator.GetCurrentAnimatorStateInfo(0).IsName("JumpLeft"))
+                        {
+                            playerAnimator.Play("IdleLeft");
+                        }
+                    }
+                }
+                if (isLadder == false && !Input.GetKey(KeyCode.W) && detector.isGround == true)
                 {
 
                     if (Input.GetKeyUp(KeyCode.A))
