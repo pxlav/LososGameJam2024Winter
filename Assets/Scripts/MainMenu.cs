@@ -14,12 +14,18 @@ public class MainMenu : MonoBehaviour
     public bool isCinematicOn;
     public float cinematicTimer;
     public GameObject playerObj;
+    public bool isOnHowToPlay;
+    public bool isOnCredits;
+    public GameObject howToPlayObj;
+    public GameObject creditsObj;
     private void Start()
     {
         isOn = true;
         isCinematicOn = false;
-        cinematicTimer = 10.0f;
+        cinematicTimer = 13.0f;
         playerObj.SetActive(false);
+        isOnHowToPlay = false;
+        isOnCredits = false;
     }
 
     private void Update()
@@ -53,6 +59,22 @@ public class MainMenu : MonoBehaviour
                 playerObj.SetActive(true);
             }
         }
+        if(isOnHowToPlay == true)
+        {
+            howToPlayObj.SetActive(true);
+        }
+        else
+        {
+            howToPlayObj.SetActive(false);
+        }
+        if(isOnCredits == true)
+        {
+            creditsObj.SetActive(true);
+        }
+        else
+        {
+            creditsObj.SetActive(false);
+        }
     }
     public void Play()
     {
@@ -67,5 +89,13 @@ public class MainMenu : MonoBehaviour
     public void Exit()
     {
         Application.Quit();
+    }
+    public void Credits()
+    {
+        isOnCredits = !isOnCredits;
+    }
+    public void HowToPlay()
+    {
+        isOnHowToPlay = !isOnHowToPlay;
     }
 }

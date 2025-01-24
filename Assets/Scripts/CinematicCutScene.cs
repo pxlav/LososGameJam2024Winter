@@ -11,7 +11,7 @@ public class CinematicCutScene : MonoBehaviour
     public MainMenu menu;
     private void Start()
     {
-        sceneTimer = 10.0f;
+        sceneTimer = 13.0f;
     }
 
     private void Update()

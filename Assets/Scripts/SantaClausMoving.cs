@@ -20,11 +20,13 @@ public class SantaClausMoving : MonoBehaviour
     public bool isLadder;
     public MainMenu menu;
     public bool isRight;
+    public GameObject wrongGift;
     private void Start()
     {
         playerAnimated.SetActive(true);
         playerLose.SetActive(false);
         deadTimer = 3.0f;
+        wrongGift.SetActive(false);
     }
     private void Update()
     {
@@ -99,6 +101,7 @@ public class SantaClausMoving : MonoBehaviour
         {
             playerAnimated.SetActive(false);
             playerLose.SetActive(true);
+            wrongGift.SetActive(true);
             deadTimer -= Time.deltaTime;
             if (deadTimer <= 0)
             {

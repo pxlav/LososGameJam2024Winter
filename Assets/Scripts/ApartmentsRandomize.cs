@@ -13,10 +13,6 @@ public class ApartmentsRandomize : MonoBehaviour
     }
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.G))
-        {
-            canRandomize = true;
-        }
         if(canRandomize == true)
         {
             for (int i = 0; i < apartments.Length; i++)
